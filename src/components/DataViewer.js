@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData, clearData } from "../redux/actions";
+import { fetchData, clearData } from "../redux/reducer";
 
 const DataViewer = () => {
     const [url, setUrl] = useState("https://swapi.py4e.com/api/people/1/");
@@ -18,6 +18,7 @@ const DataViewer = () => {
     const handleClear = () => {
         dispatch(clearData());
     };
+
 
     return (
         <div
